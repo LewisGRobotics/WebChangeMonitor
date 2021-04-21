@@ -13,7 +13,7 @@
 
 h1{
   color: var(--nicewhite);
-  font-size:7.5vh;
+  font-size:5vh;
   margin:1vw;
 }
 
@@ -33,6 +33,18 @@ h2{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.GenericButton{
+  width:75vw;
+  height:10vh;
+  margin:1vh;
+  border-radius: 5px;
+  font-size: 3.75vh;
+  background-color: var(--niceblue);
+  color: var(--nicewhite);
+  max-width: 1000px;
+  max-height: 100px;
 }
 
 .TextInput{

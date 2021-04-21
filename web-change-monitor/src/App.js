@@ -1,5 +1,6 @@
 import './App.css';
 import TextInput from './components/TextInput'
+import GenericButton from './components/GenericButton'
 import {useState} from 'react'
 
 function App() {
@@ -22,9 +23,15 @@ function App() {
     request.open("GET", 'https://cors-anywhere-lg.herokuapp.com/'+ userTextInput, true);
     request.send(null);
     request.onreadystatechange = function() {
-      if (request.readyState == 4)
-      alert(request.responseText);
-      setPageHTML(request.response);
+      if (request.status == 200){
+        alert("Monitoring started, do not close this window")
+        console.log(request.response)        
+        setPageHTML(request.response);
+      }
+      else{
+        alert(`Error ${request.status}: ${request.statusText}`);
+      }
+      
     };
   }
   
@@ -32,14 +39,15 @@ function App() {
   return (
     <div className="App">
         <h1>
-          <code>{"</>"}</code>
-          Webpage change monitor
-          <code>{"</>"}</code>
+          <code>{"<"}</code>
+          HTML change monitor
+          <code>{"/>"}</code>
         </h1>
         <h2>
-          Checks for changes in the HTML of the selected webpage
+          I want to check for changes in the HTML of the following webpage:
         </h2>
         <TextInput setText={setUserTextInput} defaultText={userTextInput} onEnter={fetchHTML}/>
+        <GenericButton text="Start monitoring" onClick={fetchHTML}/>
         <a
             className="App-link"
             href="https://github.com/LewisGRobotics"

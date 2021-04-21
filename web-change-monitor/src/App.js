@@ -51,6 +51,14 @@ function App() {
   
   const monitor = () =>{
     console.log("I'm monitoring stuff very attentively")
+    var request = makeHttpObject();
+      request.open("GET", 'https://cors-anywhere-lg.herokuapp.com/'+ userTextInput, true);
+      request.send(null);
+      request.onreadystatechange = function() {
+        if (request.readyState === XMLHttpRequest.DONE && request.status == 200){
+          if(pageHTML != request.response) alert("Changed!!")
+        }
+      }  
   }
 
   // <Combobox options={options} label="Ms refresh rate"/>

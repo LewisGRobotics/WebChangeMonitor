@@ -35,6 +35,15 @@ h2{
   color: white;
 }
 
+.Combobox{
+  margin:1vh;
+  border-radius: 5px;
+  font-size: 3.75vh;
+  width:75vw;
+  background-color: var(--nicegrey);
+  color: var(--nicewhite);
+}
+
 .GenericButton{
   width:75vw;
   height:10vh;

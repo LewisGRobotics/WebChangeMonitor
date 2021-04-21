@@ -1,0 +1,52 @@
+:root {
+  --nicewhite: #ffffff;
+  --niceblue: #1f6f8b;
+  --nicegrey: #99a8b2;
+  --nicebrown:#e6d5b8;
+  --niceblack: #1C2B2D;
+
+  
+  --nicedarkbrown:#665538;
+  --nicered: #8b1f2d;
+  --nicegreen: #1f8b2d;
+}
+
+h1{
+  color: var(--nicewhite);
+  font-size:7.5vh;
+  margin:1vw;
+}
+
+h2{
+  color: var(--nicegrey);
+  font-size:2.5vh;
+  margin:1vw;
+}
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.TextInput{
+  width:75vw;
+  height:10vw;
+  margin:1vw;
+  border-radius: 5px;
+  font-size:2.5vh;
+  text-align: center;
+  background-color: var(--nicebrown);
+  max-width: 1000px;
+  max-height: 100px;
+}
+
+.App-link {
+  color: #61dafb;
+}
